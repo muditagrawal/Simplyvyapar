@@ -1,4 +1,4 @@
-package org.mudit.Simplyvyapar;
+package org.mudit.Simplyvyapar.resources;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
