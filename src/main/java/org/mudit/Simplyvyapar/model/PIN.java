@@ -9,36 +9,29 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @XmlRootElement
-public class Attachment {
+public class PIN {
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
-	private String filname;
-	private String filepath;
+	private int pincode;
 	@ManyToOne
-	private Product product;
-	public Product getProduct() {
-		return product;
-	}
-	public void setProduct(Product product) {
-		this.product = product;
-	}
+	private City city;
+	
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getFilname() {
-		return filname;
+	public int getPincode() {
+		return pincode;
 	}
-	public void setFilname(String filname) {
-		this.filname = filname;
+	public void setPincode(int pincode) {
+		this.pincode = pincode;
 	}
-	public String getFilepath() {
-		return filepath;
+	public City getCity() {
+		return city;
 	}
-	public void setFilepath(String filepath) {
-		this.filepath = filepath;
+	public void setCity(City city) {
+		this.city = city;
 	}
-	
 }

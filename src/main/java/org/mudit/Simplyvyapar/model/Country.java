@@ -1,5 +1,6 @@
 package org.mudit.Simplyvyapar.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,13 +9,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @XmlRootElement
-public class Product {
+public class Country {
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
+	@Column(unique=true)
 	private String name;
-	private String description;
-	private float value;
-	private int availablequantity;
 	
 	public int getId() {
 		return id;
@@ -28,24 +27,5 @@ public class Product {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getDescription() {
-		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	public float getValue() {
-		return value;
-	}
-	public void setValue(float value) {
-		this.value = value;
-	}
-	public int getAvailablequantity() {
-		return availablequantity;
-	}
-	public void setAvailablequantity(int availablequantity) {
-		this.availablequantity = availablequantity;
-	}
 	
-
 }
