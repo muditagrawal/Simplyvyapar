@@ -15,7 +15,7 @@ import org.mudit.Simplyvyapar.model.User;
  * Root resource (exposed at "myresource" path)
  */
 @Path("myresource")
-public class MyResource {
+public class TestResource {
 
     /**
      * Method handling HTTP GET requests. The returned object will be sent
