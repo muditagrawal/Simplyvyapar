@@ -5,6 +5,12 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.hibernate.Session;
+import org.mudit.Simplyvyapar.configuration.MySessionFactory;
+import org.mudit.Simplyvyapar.model.Address;
+import org.mudit.Simplyvyapar.model.PIN;
+import org.mudit.Simplyvyapar.model.User;
+
 /**
  * Root resource (exposed at "myresource" path)
  */
@@ -20,6 +26,15 @@ public class MyResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getIt() {
+    	Session mySession = MySessionFactory.getMy_factory().openSession();
+    	mySession.beginTransaction();
+    	PIN myPin = new PIN();
+    	
+    	Address myAddress = new Address();
+    	User myUser = new User("username","firstname","lastname","password","email");
+    	mySession.save(myUser);
+    	mySession.getTransaction().commit();
+    	mySession.close();
         return "Got it!";
     }
 }

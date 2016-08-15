@@ -1,5 +1,14 @@
 package org.mudit.Simplyvyapar.model;
 
-public class Transaction {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@Entity
+@XmlRootElement
+public class Transaction {
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
+	private int id;
 }

@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.persistence.ManyToOne;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
@@ -14,9 +14,13 @@ public class Address {
 	private int id;
 	private String line1;
 	private String line2;
+	@ManyToOne
 	private City city;
+	@ManyToOne
 	private State state;
+	@ManyToOne
 	private Country country;
+	@ManyToOne
 	private PIN pin;
 	public int getId() {
 		return id;
