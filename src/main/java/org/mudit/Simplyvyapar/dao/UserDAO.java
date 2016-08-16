@@ -1,19 +1,35 @@
 package org.mudit.Simplyvyapar.dao;
 
+import java.util.List;
+
+import org.mudit.Simplyvyapar.model.User;
+
 public class UserDAO {
-	public void createUser() {
-		
+	
+	public List<User> getAllUser() {
+		return null;
 	}
-	public void updateUser() {
-		
+	
+	public User createUser() {
+		return null;
 	}
-	public void deleteUser() {
-		
+	public User updateUserById() {
+		return null;
 	}
-	public void getUserById() {
-		
+	public User deleteUserById() {
+		return null;
 	}
-	public void getUserByName() {
-		
+	
+	public User getUserById() {
+		return null;
 	}
+	public User getUserByUserName() {
+		return null;
+	}
+
+	public boolean checkUserNameExist() {
+		return false;
+	}
+	
+	
 }
